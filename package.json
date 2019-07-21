@@ -1,0 +1,24 @@
+{
+  "name": "for-fun-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^5.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NorbertLam/for-fun-electron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NorbertLam/for-fun-electron/issues"
+  },
+  "homepage": "https://github.com/NorbertLam/for-fun-electron#readme"
+}
