@@ -12,7 +12,7 @@ class ListContainer extends React.Component {
     fetch('http://localhost:8000/api/likes/')
       .then(resp => resp.json())
       .then(json => {
-        this.setState({clips: json})
+        this.setState({clips: json.reverse()})
       })
   }
 
