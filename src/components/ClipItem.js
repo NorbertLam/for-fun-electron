@@ -6,7 +6,7 @@ class ClipItem extends React.Component {
 
     return(
       <li>
-        PlaceHolder
+        <h2>{this.props.clipObj.title}</h2>
       </li>
     )
   }
