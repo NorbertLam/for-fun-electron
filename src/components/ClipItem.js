@@ -5,7 +5,8 @@ class ClipItem extends React.Component {
   render() {
 
     return(
-      <li>
+      <li className='list-group-item'>
+        <img className='thumbnail' src={this.props.clipObj.thumbnail} alt=""/>
         <h2>{this.props.clipObj.title}</h2>
       </li>
     )

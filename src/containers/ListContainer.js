@@ -23,7 +23,7 @@ class ListContainer extends React.Component {
     })
 
     return(
-      <ul className='list-container'>
+      <ul className='list-group list-group-flush'>
         {clipsArr}
       </ul>
     )
