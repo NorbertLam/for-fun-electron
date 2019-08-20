@@ -1,4 +1,5 @@
 const electron = require('electron');
+const ipcMain = electron.ipcMain;
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
@@ -10,8 +11,8 @@ let mainWindow;
 let clipWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680});
-  clipWindow = new BrowserWindow({width: 1280, height: 720, parent: mainWindow, show: true});
+  mainWindow = new BrowserWindow({width: 900, height: 680, webPreferences: {nodeIntegration: true}});
+  clipWindow = new BrowserWindow({width: 1280, height: 720, parent: mainWindow, show: false});
 
 
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
@@ -33,3 +34,7 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+ipcMain.on('toggle-clip', (event, arg) => {
+  clipWindow.show();
+})
